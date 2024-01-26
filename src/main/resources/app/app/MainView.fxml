@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.app.MainController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="175.0" prefWidth="800.0" style="-fx-background-color: #003c8f;">
+               <children>
+                  <Label alignment="CENTER" layoutX="94.0" layoutY="20.0" prefHeight="50.0" prefWidth="600.0" text="STUDENT MANAGEMENT SYSTEM LOGIN" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="Rockwell Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="245.0" layoutY="120.0" text="DB Connection status:" textFill="WHITE">
+                     <font>
+                        <Font name="Rockwell Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDBConnStatus" layoutX="441.0" layoutY="120.0" textFill="WHITE">
+                     <font>
+                        <Font name="Rockwell" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="BTN_DEBUG" layoutX="676.0" layoutY="142.0" mnemonicParsing="false" onAction="#DEBUG_ADMIN" text="DEBUG_ADMIN" />
+                  <Button fx:id="BTN_DEBUG1" layoutX="676.0" layoutY="106.0" mnemonicParsing="false" onAction="#DEBUG_STUDENT" text="DEBUG_STUDENT" />
+               </children>
+            </Pane>
+            <HBox alignment="CENTER" layoutY="175.0" prefHeight="425.0" prefWidth="800.0" style="-fx-background-color: #42a5f5;">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="151.0" />
+                  <Pane prefHeight="500.0" prefWidth="500.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutY="42.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="500.0">
+                                 <children>
+                                    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="500.0">
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" spacing="12.0">
+                                             <padding>
+                                                <Insets left="25.0" top="25.0" />
+                                             </padding>
+                                             <children>
+                                                <Label alignment="CENTER" text="Username:">
+                                                   <font>
+                                                      <Font name="Rockwell" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="CENTER" text="Password:">
+                                                   <font>
+                                                      <Font name="Rockwell" size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="220.0" spacing="10.0">
+                                             <children>
+                                                <TextField fx:id="txtUsername" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Username" />
+                                                <PasswordField fx:id="txtPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" promptText="Password" />
+                                                <Button fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onLogin" prefHeight="30.0" prefWidth="100.0" styleClass="login" text="Login">
+                                                   <font>
+                                                      <Font name="Rockwell Bold" size="14.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets left="100.0" top="5.0" />
+                                                   </VBox.margin>
+                                                   <cursor>
+                                                      <Cursor fx:constant="DEFAULT" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <Label fx:id="lblLoginEmptyFields">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="Rockwell Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="500.0" prefWidth="150.0" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

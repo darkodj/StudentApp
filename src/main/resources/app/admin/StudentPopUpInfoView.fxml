@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.admin.StudentPopUpController">
+   <children>
+      <Pane layoutX="1.0" layoutY="-3.0" prefHeight="600.0" prefWidth="537.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/user.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="125.0" layoutY="22.0">
+               <children>
+                  <HBox style="-fx-border-color: black;">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="125.0" text="First name:" textAlignment="CENTER">
+                           <font>
+                              <Font name="Rockwell" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSPStudentFirstName" alignment="CENTER" prefHeight="30.0" prefWidth="265.0" textAlignment="CENTER">
+                           <font>
+                              <Font name="Corbel" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox style="-fx-border-color: black;">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="125.0" text="Last name:">
+                           <font>
+                              <Font name="Rockwell" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSPStudentLastName" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="265.0">
+                           <font>
+                              <Font name="Corbel" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox style="-fx-border-color: black;">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="125.0" text="Index:">
+                           <font>
+                              <Font name="Segoe UI" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSPStudentIndex" alignment="CENTER" prefHeight="30.0" prefWidth="265.0">
+                           <font>
+                              <Font name="Corbel" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox style="-fx-border-color: black;">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="125.0" text="DOB:">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSPStudentDOB" alignment="CENTER" prefHeight="30.0" prefWidth="265.0">
+                           <font>
+                              <Font name="Corbel" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox style="-fx-border-color: black;">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="125.0" text="Email:">
+                           <font>
+                              <Font name="Times New Roman" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSPStudentEmail" alignment="CENTER" prefHeight="30.0" prefWidth="265.0">
+                           <font>
+                              <Font name="Corbel" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <TableView fx:id="tbStudentData" layoutX="10.0" layoutY="244.0" prefHeight="345.0" prefWidth="291.0">
+              <columns>
+                <TableColumn fx:id="tbcSubject" editable="false" prefWidth="196.0" text="Subject" />
+                <TableColumn fx:id="tbcGrade" editable="false" prefWidth="94.0" text="Grade" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnSPEditInfo" layoutX="314.0" layoutY="193.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="125.0" text="Edit info" />
+            <Button layoutX="314.0" layoutY="315.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="125.0" text="Add course" />
+            <Button layoutX="314.0" layoutY="402.0" mnemonicParsing="false" onAction="#updateGrade" prefHeight="30.0" prefWidth="125.0" text="Change grade" />
+            <Separator layoutY="230.0" prefWidth="450.0" />
+            <TextField fx:id="tfAddCourse" layoutX="314.0" layoutY="244.0" prefHeight="30.0" prefWidth="125.0" promptText="Enter course" />
+            <TextField fx:id="tfAddGrade" layoutX="314.0" layoutY="278.0" prefHeight="30.0" prefWidth="125.0" promptText="Enter grade" />
+            <Button layoutX="314.0" layoutY="366.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="125.0" text="Remove course" />
+         </children></Pane>
+   </children>
+</AnchorPane>
